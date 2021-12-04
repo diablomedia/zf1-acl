@@ -1175,7 +1175,7 @@ class Zend_Acl_AclTest extends PHPUnit\Framework\TestCase
      */
     public function testGetRegisteredRoles()
     {
-        $this->expectError(\PHPUnit\Framework\Error\Error::class);
+        $this->expectError();
 
         $acl = $this->_acl;
         $acl->addRole('developer');
@@ -1259,7 +1259,7 @@ class Zend_Acl_AclTest extends PHPUnit\Framework\TestCase
      */
     public function testGetRegisteredRolesIsDeprecated()
     {
-        $this->expectError(\PHPUnit\Framework\Error\Error::class);
+        $this->expectError();
         $this->expectErrorMessage(
             'The method getRegisteredRoles() was deprecated as of version 1.0, and may be removed. You\'re encouraged to use getRoles() instead.'
         );
